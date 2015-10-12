@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9058" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="theWalkingScrollView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oz7-FX-Plv">
+                                <rect key="frame" x="172" y="15" width="255" height="139"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="Sne-dL-xMc"/>
+                                    <constraint firstAttribute="height" constant="139" id="aVS-dg-OjW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-vh-R7F">
+                                <rect key="frame" x="0.0" y="528" width="600" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FW1-WI-M70"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-We-VKG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="daryl" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-DT-mBD">
+                                        <rect key="frame" x="182" y="194" width="237" height="415"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rfO-vh-R7F" secondAttribute="trailing" id="5Eg-2c-xeY"/>
+                            <constraint firstItem="rfO-vh-R7F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8u6-YF-9o6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rfO-vh-R7F" secondAttribute="bottom" constant="12" id="FIO-tm-dIF"/>
+                            <constraint firstItem="RDE-We-VKG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KA5-ov-fLu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RDE-We-VKG" secondAttribute="bottom" id="Pva-kc-Uxq"/>
+                            <constraint firstItem="RDE-We-VKG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SyE-Mz-yDv"/>
+                            <constraint firstAttribute="trailing" secondItem="RDE-We-VKG" secondAttribute="trailing" id="azm-kE-WR8"/>
+                            <constraint firstItem="oz7-FX-Plv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jOZ-fG-mK6"/>
+                            <constraint firstItem="oz7-FX-Plv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="zCa-VE-H1v"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="daryl" width="368" height="610"/>
+        <image name="logo" width="732" height="340"/>
+        <image name="shelf" width="865" height="114"/>
+    </resources>
 </document>
