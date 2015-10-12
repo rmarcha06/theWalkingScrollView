@@ -36,7 +36,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-We-VKG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="daryl" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-DT-mBD">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bh6-DT-mBD">
                                         <rect key="frame" x="182" y="194" width="237" height="415"/>
                                         <animations/>
                                     </imageView>
@@ -58,6 +58,9 @@
                             <constraint firstItem="oz7-FX-Plv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="zCa-VE-H1v"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="RDE-We-VKG" id="9tt-eQ-cHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="daryl" width="368" height="610"/>
+        <image name="5" width="368" height="610"/>
         <image name="logo" width="732" height="340"/>
         <image name="shelf" width="865" height="114"/>
     </resources>
